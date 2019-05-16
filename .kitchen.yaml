@@ -1,0 +1,23 @@
+---
+driver:
+  name: docker
+
+provisioner:
+  name: shell
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-18.04
+    driver_config:
+      volume:
+      - <%= File.dirname(File.expand_path(__FILE__)) %>/results:/tmp/results
+
+suites:
+  - name: base
+    provisioner:
+      arguments: ["adrian", "config-baseline"]
+    verifier:
+      inspect_tests:
+        test/integration/base
