@@ -13,3 +13,4 @@ when 'linux'
     mode '0644'
     action :create
   end
+end
