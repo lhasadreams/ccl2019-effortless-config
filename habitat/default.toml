@@ -1,0 +1,11 @@
+# Use this file to templatize your application's native configuration files.
+# See the docs at https://www.habitat.sh/docs/create-packages-configure/.
+# You can safely delete this file if you don't need it.
+log_level = "warn"
+chef_client_ident = ""
+run_lock_timeout = "1800"
+interval = "120"
+[data_collector]
+enable = "true"
+server_url = "https://yourserver/data-collector/v0"
+token = ""
